@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader} from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
