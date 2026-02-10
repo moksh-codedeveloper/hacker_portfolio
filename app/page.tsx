@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -11,35 +10,11 @@ import {
 } from "@/components/ui/card";
 import TechStack from "@/components/TechStack";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
-
+import { Navbar } from "@/components/Navbar";
 export default function Home() {
 	return (
 		<>
-			{/* Navbar */}
-			<nav className="sticky top-0 z-50 flex justify-center mt-3">
-				<div className="flex items-center gap-4 px-6 py-2 rounded-full bg-cyan-400">
-					<span className="font-semibold text-black">Portfolio</span>
-
-					<Link href="/">
-						<Button variant="ghost" className="text-black hover:bg-cyan-600">
-							Home
-						</Button>
-					</Link>
-
-					<Link href="/about">
-						<Button variant="ghost" className="text-black hover:bg-cyan-600">
-							About
-						</Button>
-					</Link>
-
-					<Link href="/contact">
-						<Button variant="ghost" className="text-black hover:bg-cyan-600">
-							Contact
-						</Button>
-					</Link>
-				</div>
-			</nav>
-
+			<Navbar/>
 			{/* Hero */}
 			<Card className="mt-10 max-w-3xl mx-auto bg-cyan-500 hover:bg-cyan-600">
 				<CardHeader className="text-3xl font-bold text-center text-black">
