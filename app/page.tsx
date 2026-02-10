@@ -10,7 +10,7 @@ import {
 	CardHeader,
 } from "@/components/ui/card";
 import TechStack from "@/components/TechStack";
-
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 export default function Home() {
 	return (
 		<>
@@ -88,6 +88,21 @@ export default function Home() {
 					</CardContent>
 				</Card>
 			</div>
+			<Card className="mt-4 bg-cyan-400 max-w-full flex jutify-center mx-10">
+				<CardHeader className="text-3xl text-center hover:underline text-black">Social Links</CardHeader>
+				<CardDescription className="flex justify-center">
+					<Link className="text-4xl text-center p-3" target="_blank" href={"https://github.com/moksh-codedeveloper"}>
+						<FaGithub className="text-black"/>
+					</Link>
+					<Link className="text-4xl text-center p-3" target="_blank" href={"https://www.linkedin.com/in/moksh-malde-126902288/"}>
+						<FaLinkedin className="text-black"/>
+					</Link>
+					<Link className="text-4xl text-center p-3" target="_blank" href={"https://www.youtube.com/@glitchnuniverse"}>
+						<FaYoutube className="text-black"/>
+					</Link>
+				</CardDescription>
+				<CardContent className="text-xl text-center">Copyright &copy;2026 Moksh Malde</CardContent>
+			</Card>
 		</>
 	);
 }
