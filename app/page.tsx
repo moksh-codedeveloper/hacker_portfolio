@@ -11,55 +11,60 @@ import {
 } from "@/components/ui/card";
 import TechStack from "@/components/TechStack";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+
 export default function Home() {
 	return (
 		<>
 			{/* Navbar */}
-			<nav className="sticky top-0 z-50 flex justify-center mt-2">
-				<div className="flex items-center bg-cyan-400 rounded-full px-6 py-2 gap-4">
+			<nav className="sticky top-0 z-50 flex justify-center mt-3">
+				<div className="flex items-center gap-4 px-6 py-2 rounded-full bg-cyan-400">
 					<span className="font-semibold text-black">Portfolio</span>
 
 					<Link href="/">
-						<Button variant="ghost" className="text-black hover:bg-green-300">
+						<Button variant="ghost" className="text-black hover:bg-cyan-600">
 							Home
 						</Button>
 					</Link>
 
 					<Link href="/about">
-						<Button variant="ghost" className="text-black hover:bg-green-300">
+						<Button variant="ghost" className="text-black hover:bg-cyan-600">
 							About
 						</Button>
 					</Link>
 
 					<Link href="/contact">
-						<Button variant="ghost" className="text-black hover:bg-green-300">
+						<Button variant="ghost" className="text-black hover:bg-cyan-600">
 							Contact
 						</Button>
 					</Link>
 				</div>
 			</nav>
 
-			{/* Hero Card */}
-			<Card className="bg-cyan-500 mt-10 max-w-3xl mx-auto hover:bg-black transition-colors">
-				<CardHeader className="text-3xl text-center font-bold hover:text-white">
+			{/* Hero */}
+			<Card className="mt-10 max-w-3xl mx-auto bg-cyan-500 hover:bg-cyan-600">
+				<CardHeader className="text-3xl font-bold text-center text-black">
 					I’m Moksh Malde
 				</CardHeader>
-
-				<CardDescription className="text-center text-gray-200 px-6 text-xl">
+				<CardDescription className="text-center text-gray-100 text-lg px-6">
 					Backend Engineer • Full-Stack Developer • Linux Enthusiast
 				</CardDescription>
 			</Card>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<div className="text-2xl hover:bg-zinc-800 bg-cyan-400 p-5 mt-5 text-gray-500 max-w-3xl mx-10 flex-row flex-wrap flex-5 justify-center rounded-md items-center">
-					<header className="text-3xl text-center hover:underline">
-						TechStack
-					</header>
-					<section className="mt-3">
+
+			{/* Main Content */}
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mt-8">
+				{/* Tech Stack */}
+				<Card className="bg-cyan-400 hover:bg-cyan-600">
+					<CardHeader className="text-2xl text-center text-black">
+						Tech Stack
+					</CardHeader>
+					<CardContent>
 						<TechStack />
-					</section>
-				</div>
-				<Card className="mx-10 mt-10 bg-cyan-400 max-w-4xl hover:bg-zinc-800 hover:border-zinc-800">
-					<CardHeader className="text-3xl text-center hover:text-gray-100">
+					</CardContent>
+				</Card>
+
+				{/* About */}
+				<Card className="bg-cyan-400 hover:bg-cyan-600">
+					<CardHeader className="text-2xl text-center text-black">
 						About Me
 					</CardHeader>
 
@@ -67,41 +72,48 @@ export default function Home() {
 						Backend-focused developer with system-level thinking
 					</CardDescription>
 
-					<CardContent className="mt-4 space-y-4 text-left text-zinc-900 bg-cyan-500 p-6 rounded-2xl hover:text-white transition">
+					<CardContent className="mt-4 space-y-4 text-black">
 						<p>
-							I specialize in building scalable backend systems and full-stack
-							applications using MERN, Django (Python), and .NET (C#).
+							I build scalable backend systems and full-stack applications using
+							MERN, Django (Python), and .NET (C#).
 						</p>
 
 						<p>
-							I’ve been daily-driving Arch Linux for over 2 years and enjoy
-							working close to the system — performance, security, and clean
-							architecture matter to me.
+							Daily-driving Arch Linux for 2+ years. I care deeply about
+							performance, security, and clean architecture.
 						</p>
 
 						<Link
 							href="/projects"
-							className="inline-block underline text-cyan-900 hover:text-gray-200"
+							className="underline text-black hover:text-gray-200"
 						>
 							View my projects →
 						</Link>
 					</CardContent>
 				</Card>
 			</div>
-			<Card className="mt-4 bg-cyan-400 max-w-full flex jutify-center mx-10">
-				<CardHeader className="text-3xl text-center hover:underline text-black">Social Links</CardHeader>
-				<CardDescription className="flex justify-center">
-					<Link className="text-4xl text-center p-3" target="_blank" href={"https://github.com/moksh-codedeveloper"}>
-						<FaGithub className="text-black"/>
+
+			{/* Social */}
+			<Card className="mt-10 mx-10 bg-cyan-400 hover:bg-cyan-600">
+				<CardHeader className="text-2xl text-center text-black">
+					Social Links
+				</CardHeader>
+
+				<CardDescription className="flex justify-center gap-6 py-4">
+					<Link href="https://github.com/moksh-codedeveloper" target="_blank">
+						<FaGithub className="text-3xl text-black" />
 					</Link>
-					<Link className="text-4xl text-center p-3" target="_blank" href={"https://www.linkedin.com/in/moksh-malde-126902288/"}>
-						<FaLinkedin className="text-black"/>
+					<Link href="https://www.linkedin.com/in/moksh-malde-126902288/" target="_blank">
+						<FaLinkedin className="text-3xl text-black" />
 					</Link>
-					<Link className="text-4xl text-center p-3" target="_blank" href={"https://www.youtube.com/@glitchnuniverse"}>
-						<FaYoutube className="text-black"/>
+					<Link href="https://www.youtube.com/@glitchnuniverse" target="_blank">
+						<FaYoutube className="text-3xl text-black" />
 					</Link>
 				</CardDescription>
-				<CardContent className="text-xl text-center">Copyright &copy;2026 Moksh Malde</CardContent>
+
+				<CardContent className="text-center text-black">
+					© 2026 Moksh Malde
+				</CardContent>
 			</Card>
 		</>
 	);
