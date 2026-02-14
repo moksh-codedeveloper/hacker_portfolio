@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./ModeToggle";
 import { FaTerminal, FaTimes } from "react-icons/fa";
 
 export function Navbar() {
@@ -43,7 +42,6 @@ export function Navbar() {
                                 </Button>
                             </Link>
                         ))}
-                        <ModeToggle />
                     </div>
                 </nav>
             )}

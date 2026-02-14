@@ -58,7 +58,7 @@ export default function Home() {
                     </Card>
 
                     {/* Column 2: Quick Stats / Socials */}
-                    <Card className="bg-zinc-950 border-green-900 flex flex-col">
+                    <Card className="bg-zinc-950 border-green-900 flex flex-col text-white">
                         <CardHeader className="border-b border-green-900/50 py-3">
                             <CardTitle className="text-sm flex items-center gap-2">
                                 <FaShieldAlt className="text-xs" /> EXTERNAL_LINKS
