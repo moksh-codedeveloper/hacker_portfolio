@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,9 +41,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white font-mono`}
       >
-        <main>{children}</main>
-        {/* Sonner Toaster for your Contact Page notifications */}
+        {children}
         <Analytics />
+        <SpeedInsights />
+        {/* Sonner Toaster for your Contact Page notifications */}
         <Toaster position="top-center" richColors />
       </body>
     </html>
